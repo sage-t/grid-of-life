@@ -114,10 +114,11 @@ grid.insert_seed(10,10,rpentomino)
 # grid.insert_seed(16,12,glider)
 # grid.insert_seed(23,12,glider)
 
-
-for _ in range(frames):
-    os.system("clear")
-    grid.out()
-    grid.next()
-    sleep(sleep_time)
-
+try:
+    for _ in range(frames):
+        os.system("clear")
+        grid.out()
+        grid.next()
+        sleep(sleep_time)
+except KeyboardInterrupt:
+    exit(0)
