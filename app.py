@@ -56,9 +56,7 @@ class Grid:
                     if crowd == 3:
                         to_change.append((x, y, 1))
         
-        for change in to_change:
-            self._set(change[0], change[1], change[2])
-
+        [self._set(*change) for change in to_change]
                 
     def insert_seed(self, x0, y0, character):
         height=len(character)
